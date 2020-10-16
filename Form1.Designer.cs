@@ -35,6 +35,7 @@
             this.txtMaximum = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.txtOutput = new System.Windows.Forms.TextBox();
+            this.btnDouble = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -58,6 +59,7 @@
             this.txtMinimum.Name = "txtMinimum";
             this.txtMinimum.Size = new System.Drawing.Size(100, 20);
             this.txtMinimum.TabIndex = 1;
+            this.txtMinimum.TextChanged += new System.EventHandler(this.txtMinimum_TextChanged_1);
             // 
             // lblMinimum
             // 
@@ -97,20 +99,35 @@
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(173, 23);
             this.btnSubmit.TabIndex = 5;
-            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.Text = "Submit (Int)";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // txtOutput
             // 
-            this.txtOutput.BackColor = System.Drawing.Color.Black;
-            this.txtOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOutput.BackColor = System.Drawing.Color.DimGray;
+            this.txtOutput.Font = new System.Drawing.Font("MS Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOutput.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtOutput.Location = new System.Drawing.Point(134, 61);
+            this.txtOutput.Location = new System.Drawing.Point(134, 86);
             this.txtOutput.Multiline = true;
             this.txtOutput.Name = "txtOutput";
             this.txtOutput.ReadOnly = true;
-            this.txtOutput.Size = new System.Drawing.Size(173, 62);
+            this.txtOutput.Size = new System.Drawing.Size(173, 37);
             this.txtOutput.TabIndex = 6;
+            this.txtOutput.TextChanged += new System.EventHandler(this.txtOutput_TextChanged);
+            // 
+            // btnDouble
+            // 
+            this.btnDouble.BackColor = System.Drawing.Color.Crimson;
+            this.btnDouble.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDouble.ForeColor = System.Drawing.Color.Black;
+            this.btnDouble.Location = new System.Drawing.Point(134, 57);
+            this.btnDouble.Name = "btnDouble";
+            this.btnDouble.Size = new System.Drawing.Size(173, 23);
+            this.btnDouble.TabIndex = 7;
+            this.btnDouble.Text = "Get Double";
+            this.btnDouble.UseVisualStyleBackColor = false;
+            this.btnDouble.Click += new System.EventHandler(this.btnDouble_Click);
             // 
             // Form1
             // 
@@ -118,6 +135,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(319, 135);
+            this.Controls.Add(this.btnDouble);
             this.Controls.Add(this.txtOutput);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.txtMaximum);
@@ -142,6 +160,7 @@
         private System.Windows.Forms.TextBox txtMaximum;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.TextBox txtOutput;
+        private System.Windows.Forms.Button btnDouble;
     }
 }
 
