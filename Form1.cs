@@ -50,7 +50,8 @@ namespace Part_4___Random_Numbers_Assignment
             min = Convert.ToInt32(txtMinimum.Text);
             max = Convert.ToInt32(txtMaximum.Text);
 
-            txtOutput.Text = generator.NextDouble() + generator.Next(0,11) +"";
+            txtOutput.Text = generator.NextDouble() + generator.Next(min, max) +"";
+                
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -58,7 +59,7 @@ namespace Part_4___Random_Numbers_Assignment
             min = Convert.ToInt32(txtMinimum.Text);
             max = Convert.ToInt32(txtMaximum.Text);
 
-            txtOutput.Text = generator.Next(min, max) + "";
+            txtOutput.Text = generator.Next(min, max + 1) + "";
         }
     }
 }
